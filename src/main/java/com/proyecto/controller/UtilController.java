@@ -20,10 +20,11 @@ import com.proyecto.service.MarcaService;
 import com.proyecto.service.PaisService;
 import com.proyecto.service.TipoReclamoService;
 import com.proyecto.service.UbigeoService;
+import com.proyecto.util.AppSettings;
 
 @RestController
-@RequestMapping("/url/lista")
-@CrossOrigin(origins = "http://localhost:4200")
+@RequestMapping("/url/util")
+@CrossOrigin(origins = AppSettings.URL_CROSS_ORIGIN)
 public class UtilController {
 
 	@Autowired
