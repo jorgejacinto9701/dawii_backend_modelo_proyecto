@@ -34,23 +34,5 @@ public class MarcaController {
 	}
 
 	
-	@PostMapping
-	@ResponseBody
-	public  ResponseEntity<Map<String, Object>> insertaMarca(@RequestBody Marca obj){
-		Map<String, Object> salida = new HashMap<>();
-		try {
-			obj.setFechaRegistro(new Date());
-			obj.setEstado(1);
-			Marca objSalida = marcaService.agregarMarca(obj);
-			if (objSalida == null) {
-				salida.put("mensaje", "No se realizó el registro, consultar con el administrador.");
-			}else {
-				salida.put("mensaje", "Se registró exitosamente.");
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-			salida.put("mensaje", "No se realizó el registro, consultar con el administrador.");
-		}
-		return ResponseEntity.ok(salida);
-	}
+	
 }

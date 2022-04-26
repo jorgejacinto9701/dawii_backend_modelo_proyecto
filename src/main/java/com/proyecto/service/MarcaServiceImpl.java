@@ -19,8 +19,6 @@ public class MarcaServiceImpl implements MarcaService {
 		return Repository.findAll();
 	}
 	
-	public Marca agregarMarca(Marca obj){
-		return Repository.save(obj);
-	}
+
 
 }
